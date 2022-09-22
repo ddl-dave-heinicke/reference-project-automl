@@ -6,7 +6,8 @@ import h2o
 import pandas as pd
 import sys
 
-
+print(sys.argv[1])
+print(sys.argv[2])
 
 data_dir = sys.argv[1]
 target_col = sys.argv[2]
