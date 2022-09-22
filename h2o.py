@@ -3,7 +3,6 @@
 
 
 import h2o
-from h2o.automl import H2OAutoML
 import pandas as pd
 import sys
 
@@ -30,7 +29,7 @@ x.remove(y)
 
 hf[y] = hf[y].asfactor()
 
-aml = H2OAutoML(max_models=20, seed=1)
+aml = h2o.automl.H2OAutoML(max_models=20, seed=1)
 aml.train(x=x, y=y, training_frame=hf)
 
 
